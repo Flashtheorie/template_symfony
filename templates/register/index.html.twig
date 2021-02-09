@@ -1,8 +1,28 @@
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet"/>
 
-
+<title>Inscription</title>
 {% include 'navbar.html.twig' %}
 
 
 
-<h1>Bienvenue sur la page d'inscription</h1>
+<header class="masthead bg-info text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+                <form method="POST" action="action/register.php">
+                    <label for="login">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="login" name="username" placeholder="Votre nom d'utilisateur">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">  
+                    <label for="passwordbis">Retapez votre mot de passe</label>
+                    <input type="password" class="form-control" id="passwordbis" name="passwordbis" placeholder="Retapez votre mot de passe">
+                    <hr>
+                    <button type="submit" name="submit" class="btn btn-outline-light btn-lg" href="https://startbootstrap.com/theme/freelancer/">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        Inscription
+                    </button> 
+                    <br><br>
+                    <a class="text-secondary" href="/account/login">J'ai déja un compte</a>
+                </form>
+                
+            </div>
+        </header>

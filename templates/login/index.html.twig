@@ -1,8 +1,32 @@
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet"/>
 
-
+<title>Connexion</title>
 {% include 'navbar.html.twig' %}
 
+ <header class="masthead bg-info text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+
+<form method="POST" action="action/login.php">
+                    <label for="login">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="login" name="username">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" name="password">  
+                    <hr>
+                    <!-- 
+                    <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="1" id="cookies" name="cookie">
+  <label class="form-check-label" for="flexCheckDefault">
+    Se souvenir de moi
+  </label>
+</div>
+<hr>-->
+                    <button type="submit" name="submit" class="btn btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        Connexion
+                    </button> 
+                    <br><br>
+                    <a class="text-secondary" href="register">Je n'ai pas encore de compte</a>
+                </form>
 
 
-<h1>Bienvenue sur la page de connexion</h1>
+</header>
